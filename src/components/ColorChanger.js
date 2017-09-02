@@ -11,8 +11,10 @@ export default class ColorChanger extends Component {
   // componentWillReceiveProps
 
   render() {
+    console.log('this.props', this.props)
+
     return (
-      <select className="dropDownContainer">
+      <select className="dropDownContainer" onChange={(e) => this.props.update( e.target.value)}>
         <option value="black"> Black </option>
         <option value="blue"> Blue </option>
         <option value="green"> Green </option>
